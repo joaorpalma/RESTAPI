@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RESTAPI:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6a49466c-fa91-46b1-b52d-c243b48071f0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +40,62 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="run" />
+      <command value="./gradlew build" />
+      <command value="ls" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.RestapiApplication">
+    <configuration name="RestapiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.simplenotes.RESTAPI.RestapiApplication" />
+      <module name="RESTAPI.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simplenotes.RESTAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RESTAPI" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in RESTAPI.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RESTAPI.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RESTAPI" />
+        <item itemvalue="Application.RestapiApplication" />
+        <item itemvalue="JUnit.All in RESTAPI.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -61,10 +120,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576419840154">
+    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576436737363">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
-    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576419840154" />
+    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576436737363" />
     <state x="583" y="279" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576420885704">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
@@ -73,10 +132,34 @@
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
     <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576429252221" />
-    <state x="449" y="166" width="1262" height="722" key="SettingsEditor" timestamp="1576420353108">
+    <state x="817" y="318" width="570" height="418" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576439938848">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
-    <state x="449" y="166" width="1262" height="722" key="SettingsEditor/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576420353108" />
+    <state x="817" y="318" width="570" height="418" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576439938848" />
+    <state width="1878" height="320" key="GridCell.Tab.0.bottom" timestamp="1576446728459">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state width="1878" height="320" key="GridCell.Tab.0.bottom/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576446728459" />
+    <state width="1878" height="320" key="GridCell.Tab.0.center" timestamp="1576446728458">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state width="1878" height="320" key="GridCell.Tab.0.center/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576446728458" />
+    <state width="1878" height="320" key="GridCell.Tab.0.left" timestamp="1576446728457">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state width="1878" height="320" key="GridCell.Tab.0.left/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576446728457" />
+    <state width="1878" height="320" key="GridCell.Tab.0.right" timestamp="1576446728458">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state width="1878" height="320" key="GridCell.Tab.0.right/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576446728458" />
+    <state x="449" y="166" width="1262" height="722" key="SettingsEditor" timestamp="1576439974182">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="449" y="166" width="1262" height="722" key="SettingsEditor/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576439974182" />
+    <state x="867" y="403" key="classpath-attribute-editor" timestamp="1576439888622">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="867" y="403" key="classpath-attribute-editor/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576439888622" />
     <state x="637" y="416" key="com.intellij.ide.util.TipDialog" timestamp="1576419015545">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
@@ -85,6 +168,10 @@
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
     <state x="664" y="485" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576432074689" />
+    <state x="625" y="272" width="670" height="675" key="run.anything.popup" timestamp="1576440013042">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="625" y="272" width="670" height="675" key="run.anything.popup/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576440013042" />
     <state x="625" y="274" width="670" height="676" key="search.everywhere.popup" timestamp="1576428937117">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
