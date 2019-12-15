@@ -11,10 +11,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Access(AccessType.FIELD)
 @Table(name = "user")
 public class User implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,7 +21,6 @@ public class User implements Serializable {
         return id;
     }
 
-    @Access(AccessType.PROPERTY)
     @Column(name = "name")
     @NotNull
     private String name;
@@ -49,7 +46,6 @@ public class User implements Serializable {
     }
 
     @Column(name = "password")
-    @NotNull
     @JsonIgnore
     private String password;
 

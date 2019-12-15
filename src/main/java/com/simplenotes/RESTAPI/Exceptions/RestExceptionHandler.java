@@ -49,5 +49,4 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler
         apiError.setDebugMessage(e.getMessage());
         return apiError;
     }
-
 }

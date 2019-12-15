@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseWrapper<List<User>> getUserAll() {
+    public ResponseWrapper<List<User>> getAllusers() {
         return new ResponseWrapper<>(_userService.getAll(), HttpStatus.OK);
     }
 
