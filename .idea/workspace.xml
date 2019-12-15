@@ -12,6 +12,13 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1V1SFWmzzFhh6e2C4fyGwvYklPw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -19,8 +26,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="ServiceViewManager">
@@ -46,9 +61,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576419840154">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="424" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576419840154" />
+    <state x="583" y="279" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576420885704">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="583" y="279" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576420885704" />
+    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser" timestamp="1576429252221">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576429252221" />
+    <state x="449" y="166" width="1262" height="722" key="SettingsEditor" timestamp="1576420353108">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="449" y="166" width="1262" height="722" key="SettingsEditor/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576420353108" />
     <state x="637" y="416" key="com.intellij.ide.util.TipDialog" timestamp="1576419015545">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
     <state x="637" y="416" key="com.intellij.ide.util.TipDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576419015545" />
+    <state x="664" y="485" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576432074689">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="664" y="485" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576432074689" />
+    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup" timestamp="1576428937117">
+      <screen x="0" y="23" width="1920" height="1123" />
+    </state>
+    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576428937117" />
   </component>
 </project>
