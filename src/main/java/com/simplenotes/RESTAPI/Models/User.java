@@ -2,10 +2,14 @@ package com.simplenotes.RESTAPI.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -69,5 +73,25 @@ public class User implements Serializable {
 
     public void setPushNotificationId(String pushnotificationid){
         this.pushnotificationid = pushnotificationid;
+    }
+
+    @ManyToMany(
+        fetch = FetchType.LAZY,
+        cascade = {CascadeType.MERGE, CascadeType.PERSIST}
+    )
+    @JoinTable(
+        name = "users_notes",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "note_id"))
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Set<Note> notes  = new HashSet<>();
+
+    public Set<Note> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Set<Note> notes) {
+        this.notes = notes;
     }
 }

@@ -1,9 +1,14 @@
 package com.simplenotes.RESTAPI.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -61,5 +66,22 @@ public class Note implements Serializable {
 
     public void setLocation(String location){
         this.location = location;
+    }
+
+    @ManyToMany(
+        fetch = FetchType.LAZY,
+        cascade = {CascadeType.MERGE, CascadeType.REMOVE},
+        mappedBy = "notes"
+    )
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Set<User> users = new HashSet<>();
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }

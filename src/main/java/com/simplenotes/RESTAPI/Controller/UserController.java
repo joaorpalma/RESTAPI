@@ -1,5 +1,6 @@
 package com.simplenotes.RESTAPI.Controller;
 
+import com.simplenotes.RESTAPI.Models.Note;
 import com.simplenotes.RESTAPI.Models.User;
 import com.simplenotes.RESTAPI.Results.ResponseWrapper;
 import com.simplenotes.RESTAPI.Service.UserService;
@@ -13,6 +14,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import java.util.List;
+import java.util.Set;
 
 import static com.simplenotes.RESTAPI.Constants.ApiConstants.MESSAGE_FOR_REGEX_NUMBER_MISMATCH;
 import static com.simplenotes.RESTAPI.Constants.ApiConstants.REGEX_FOR_NUMBERS;
@@ -30,13 +32,18 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseWrapper<List<User>> getAllusers() {
+    public ResponseWrapper<List<User>> getAllUsers() {
         return new ResponseWrapper<>(_userService.getAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/{id}/notes")
+    public ResponseWrapper<Set<Note>> getUserNotes(@Valid @Pattern(regexp = REGEX_FOR_NUMBERS, message = MESSAGE_FOR_REGEX_NUMBER_MISMATCH) @PathVariable(value = "id") String id) {
+        return  new ResponseWrapper<>(_userService.getUserNotes(Integer.parseInt(id)), HttpStatus.OK);
     }
 
     @PostMapping
     public ResponseWrapper<User> createUser(@Valid @RequestBody User user) {
-        return new ResponseWrapper<>(_userService.add(user), HttpStatus.OK);
+        return new ResponseWrapper<>(_userService.create(user), HttpStatus.OK);
     }
 
     @PutMapping

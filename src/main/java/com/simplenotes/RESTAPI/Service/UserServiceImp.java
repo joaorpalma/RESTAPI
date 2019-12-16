@@ -1,6 +1,7 @@
 package com.simplenotes.RESTAPI.Service;
 
 import com.simplenotes.RESTAPI.Exceptions.ResourceNotFoundException;
+import com.simplenotes.RESTAPI.Models.Note;
 import com.simplenotes.RESTAPI.Models.User;
 import com.simplenotes.RESTAPI.Repository.UserRepository;
 import com.sun.istack.NotNull;
@@ -9,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
-@SuppressWarnings("unchecked")
 @Service
 @NoArgsConstructor
 public class UserServiceImp extends UserService {
@@ -23,7 +24,7 @@ public class UserServiceImp extends UserService {
     }
 
     @Override
-    public User add(User o) {
+    public User create(User o) {
         return _userRepository.save(o);
     }
 
@@ -40,6 +41,11 @@ public class UserServiceImp extends UserService {
     @Override
     public User getById(int id) {
         return _getUserFromId(id);
+    }
+
+    @Override
+    public Set<Note> getUserNotes(int userId){
+        return _getUserFromId(userId).getNotes();
     }
 
     @Override
