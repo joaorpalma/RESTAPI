@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Service
@@ -34,13 +33,7 @@ public class NoteServiceImp extends NoteService {
         newNote.setLastEdit(note.getLastEdit());
         newNote.getUsers().add(user);
 
-        System.out.println(newNote);
-
-        Set<Note> userNotes = new HashSet<>();
-        userNotes.addAll(user.getNotes());
-        userNotes.add(newNote);
-
-        user.setNotes(userNotes);
+        user.getNotes().add(newNote);
 
         return _userRepository.save(user).getNotes();
     }
@@ -57,8 +50,6 @@ public class NoteServiceImp extends NoteService {
 
     @Override
     public Note getById(int id) {
-        Note note = _getNoteFromId(id);
-        System.out.println(note.getUsers());
         return _getNoteFromId(id);
     }
 
@@ -79,7 +70,6 @@ public class NoteServiceImp extends NoteService {
             User user = _getUserFromId(Integer.parseInt(userId));
             note.getUsers().add(user);
             user.getNotes().add(note);
-            _userRepository.save(user);
             users.add(_userRepository.save(user));
         }
 

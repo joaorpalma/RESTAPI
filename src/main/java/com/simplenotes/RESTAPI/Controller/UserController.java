@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import java.util.List;
+import java.util.Set;
 
 import static com.simplenotes.RESTAPI.Constants.ApiConstants.MESSAGE_FOR_REGEX_NUMBER_MISMATCH;
 import static com.simplenotes.RESTAPI.Constants.ApiConstants.REGEX_FOR_NUMBERS;
@@ -36,7 +37,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}/notes")
-    public ResponseWrapper<List<Note>> getUserNotes(@Valid @Pattern(regexp = REGEX_FOR_NUMBERS, message = MESSAGE_FOR_REGEX_NUMBER_MISMATCH) @PathVariable(value = "id") String id) {
+    public ResponseWrapper<Set<Note>> getUserNotes(@Valid @Pattern(regexp = REGEX_FOR_NUMBERS, message = MESSAGE_FOR_REGEX_NUMBER_MISMATCH) @PathVariable(value = "id") String id) {
         return  new ResponseWrapper<>(_userService.getUserNotes(Integer.parseInt(id)), HttpStatus.OK);
     }
 

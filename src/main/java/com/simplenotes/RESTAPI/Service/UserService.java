@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 public abstract class UserService implements MainService<User> {
-    public User create(User o) {
+    public User create(User user) {
         return null;
     }
 
@@ -15,7 +15,7 @@ public abstract class UserService implements MainService<User> {
         return null;
     };
 
-    public List<Note> getUserNotes(int userId){
+    public Set<Note> getUserNotes(int userId){
         return  null;
     }
 }

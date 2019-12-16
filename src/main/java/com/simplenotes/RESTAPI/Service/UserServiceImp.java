@@ -25,8 +25,8 @@ public class UserServiceImp extends UserService {
     }
 
     @Override
-    public User create(User o) {
-        return _userRepository.save(o);
+    public User create(User user) {
+        return _userRepository.save(user);
     }
 
     @Override
@@ -45,16 +45,8 @@ public class UserServiceImp extends UserService {
     }
 
     @Override
-    public List<Note> getUserNotes(int userId){
-        Set<Note> notes = _getUserFromId(userId).getNotes();
-        System.out.println(notes);
-        List<Note> noteList = new ArrayList<Note>();
-
-        for(Note n: notes){
-            noteList.add(n);
-        }
-
-        return noteList;
+    public Set<Note> getUserNotes(int userId){
+        return _getUserFromId(userId).getNotes();
     }
 
     @Override
