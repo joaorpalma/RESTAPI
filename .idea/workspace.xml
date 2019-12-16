@@ -120,10 +120,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="250" width="811" height="669" key="#Project_Structure" timestamp="1576456613173">
+    <state x="560" y="250" width="811" height="669" key="#Project_Structure" timestamp="1576508636267">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
-    <state x="560" y="250" width="811" height="669" key="#Project_Structure/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576456613173" />
+    <state x="560" y="250" width="811" height="669" key="#Project_Structure/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576508636267" />
     <state x="698" y="346" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576455951479">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
@@ -180,9 +180,9 @@
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
     <state x="625" y="272" width="670" height="675" key="run.anything.popup/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576440013042" />
-    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup" timestamp="1576460337427">
+    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup" timestamp="1576464693484">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
-    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576460337427" />
+    <state x="625" y="274" width="670" height="676" key="search.everywhere.popup/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576464693484" />
   </component>
 </project>

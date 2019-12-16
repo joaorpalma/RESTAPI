@@ -32,7 +32,7 @@ public class NoteController {
     }
 
     @PostMapping(value = "create/{userid}")
-    public ResponseWrapper<Note> createNote(@Valid @Pattern(regexp = REGEX_FOR_NUMBERS, message = MESSAGE_FOR_REGEX_NUMBER_MISMATCH) @PathVariable(value = "userid") String userid, @Valid @RequestBody Note note) {
+    public ResponseWrapper<Set<Note>> createNote(@Valid @Pattern(regexp = REGEX_FOR_NUMBERS, message = MESSAGE_FOR_REGEX_NUMBER_MISMATCH) @PathVariable(value = "userid") String userid, @Valid @RequestBody Note note) {
         return new ResponseWrapper<>(_noteService.create(Integer.parseInt(userid), note), HttpStatus.OK);
     }
 

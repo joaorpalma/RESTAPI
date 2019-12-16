@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.simplenotes'
-version = '0.3.0-SNAPSHOT'
+version = '0.6.6-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {

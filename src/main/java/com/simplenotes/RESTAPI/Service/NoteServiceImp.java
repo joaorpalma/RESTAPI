@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -23,10 +24,25 @@ public class NoteServiceImp extends NoteService {
     private UserRepository _userRepository;
 
     @Override
-    public Note create(int userId, Note o) {
+    public Set<Note> create(int userId, Note note) {
         User user = _getUserFromId(userId);
-        o.getUsers().add(user);
-        return _noteRepository.save(o);
+
+        Note newNote = new Note();
+        newNote.setTitle(note.getTitle());
+        newNote.setContent(note.getContent());
+        newNote.setLocation(note.getLocation());
+        newNote.setLastEdit(note.getLastEdit());
+        newNote.getUsers().add(user);
+
+        System.out.println(newNote);
+
+        Set<Note> userNotes = new HashSet<>();
+        userNotes.addAll(user.getNotes());
+        userNotes.add(newNote);
+
+        user.setNotes(userNotes);
+
+        return _userRepository.save(user).getNotes();
     }
 
     @Override
@@ -36,12 +52,13 @@ public class NoteServiceImp extends NoteService {
         note.setContent(o.getContent());
         note.setLastEdit(o.getLastEdit());
         note.setLocation(o.getLocation());
-        note.getUsers().addAll(o.getUsers());
         return _noteRepository.save(note);
     }
 
     @Override
     public Note getById(int id) {
+        Note note = _getNoteFromId(id);
+        System.out.println(note.getUsers());
         return _getNoteFromId(id);
     }
 
@@ -53,18 +70,20 @@ public class NoteServiceImp extends NoteService {
     }
 
     @Override
+    @Transactional
     public Set<User> addUsersToNote(int noteId, Set<String> userIds){
-        Set<User> users = new HashSet<User>();
+        Set<User> users = new HashSet<>();
+        Note note = _getNoteFromId(noteId);
 
         for (String userId : userIds) {
             User user = _getUserFromId(Integer.parseInt(userId));
-            users.add(user);
+            note.getUsers().add(user);
+            user.getNotes().add(note);
+            _userRepository.save(user);
+            users.add(_userRepository.save(user));
         }
 
-        Note note = _getNoteFromId(noteId);
-        note.setUsers(users);
-
-        return _noteRepository.save(note).getUsers();
+        return users;
     }
 
     private Note _getNoteFromId(int id)

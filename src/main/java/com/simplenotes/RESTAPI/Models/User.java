@@ -75,17 +75,12 @@ public class User implements Serializable {
         this.pushnotificationid = pushnotificationid;
     }
 
-    @ManyToMany(
-        fetch = FetchType.LAZY,
-        cascade = {CascadeType.MERGE, CascadeType.PERSIST}
-    )
-    @JoinTable(
-        name = "users_notes",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "note_id"))
-    @OnDelete(action = OnDeleteAction.CASCADE)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+    @JoinTable(name = "user_notes",
+        joinColumns = { @JoinColumn(name = "user_id") },
+        inverseJoinColumns = { @JoinColumn(name = "note_id") })
     @JsonIgnore
-    private Set<Note> notes  = new HashSet<>();
+    private Set<Note> notes = new HashSet<>();
 
     public Set<Note> getNotes() {
         return notes;

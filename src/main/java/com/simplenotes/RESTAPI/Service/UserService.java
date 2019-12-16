@@ -15,7 +15,7 @@ public abstract class UserService implements MainService<User> {
         return null;
     };
 
-    public Set<Note> getUserNotes(int userId){
+    public List<Note> getUserNotes(int userId){
         return  null;
     }
 }

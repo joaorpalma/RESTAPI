@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -44,8 +45,16 @@ public class UserServiceImp extends UserService {
     }
 
     @Override
-    public Set<Note> getUserNotes(int userId){
-        return _getUserFromId(userId).getNotes();
+    public List<Note> getUserNotes(int userId){
+        Set<Note> notes = _getUserFromId(userId).getNotes();
+        System.out.println(notes);
+        List<Note> noteList = new ArrayList<Note>();
+
+        for(Note n: notes){
+            noteList.add(n);
+        }
+
+        return noteList;
     }
 
     @Override

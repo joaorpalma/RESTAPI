@@ -68,13 +68,7 @@ public class Note implements Serializable {
         this.location = location;
     }
 
-    @ManyToMany(
-        fetch = FetchType.LAZY,
-        cascade = {CascadeType.MERGE, CascadeType.REMOVE},
-        mappedBy = "notes"
-    )
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE }, mappedBy = "notes")
     private Set<User> users = new HashSet<>();
 
     public Set<User> getUsers() {
