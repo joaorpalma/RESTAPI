@@ -27,6 +27,7 @@ public class NoteServiceImp extends NoteService {
         User user = _getUserFromId(userId);
 
         Note newNote = new Note();
+        newNote.setUuid(note.getUuid());
         newNote.setTitle(note.getTitle());
         newNote.setContent(note.getContent());
         newNote.setLocation(note.getLocation());

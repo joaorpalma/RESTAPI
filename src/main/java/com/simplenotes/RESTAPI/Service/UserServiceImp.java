@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -18,6 +17,17 @@ import java.util.Set;
 public class UserServiceImp extends UserService {
     @Autowired
     private UserRepository _userRepository;
+
+    @Override
+    public User login(User user) {
+        User userfound = _userRepository.findByEmail(user.getEmail());
+
+        if(userfound != null && userfound.getPassword() == user.getPassword()){
+            return userfound;
+        } else {
+            throw new ResourceNotFoundException( "Wrong password or user doesn't exist." );
+        }
+    }
 
     @Override
     public List<User> getAll() {

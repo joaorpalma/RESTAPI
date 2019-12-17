@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +23,17 @@ public class Note implements Serializable {
 
     public int getId() {
         return id;
+    }
+
+    @Column(name = "uuid")
+    private String uuid;
+
+    public String getUuid(){
+        return uuid;
+    }
+
+    public void setUuid(String uuid){
+        this.uuid = uuid;
     }
 
     @Column(name = "title")

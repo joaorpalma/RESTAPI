@@ -17,6 +17,9 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="RESTAPI" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -136,10 +139,10 @@
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
     <state x="583" y="279" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576420885704" />
-    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser" timestamp="1576455212526">
+    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser" timestamp="1576543377997">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>
-    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576455212526" />
+    <state x="773" y="301" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1123/0.-1057.1920.1057@0.23.1920.1123" timestamp="1576543377997" />
     <state x="817" y="318" width="570" height="418" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576439938848">
       <screen x="0" y="23" width="1920" height="1123" />
     </state>

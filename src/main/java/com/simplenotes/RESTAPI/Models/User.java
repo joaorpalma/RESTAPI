@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,6 +26,17 @@ public class User implements Serializable {
         return id;
     }
 
+    @Column(name = "uuid")
+    private String uuid;
+
+    public String getUuid(){
+        return uuid;
+    }
+
+    public void setUuid(String uuid){
+        this.uuid = uuid;
+    }
+
     @Column(name = "name")
     @NotNull
     private String name;
@@ -37,7 +49,7 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     @NotNull
     private String email;
 
@@ -52,6 +64,10 @@ public class User implements Serializable {
     @Column(name = "password")
     @JsonIgnore
     private String password;
+
+    public String getPassword(){
+        return password;
+    }
 
     @Column(name = "photo")
     private String photo;
