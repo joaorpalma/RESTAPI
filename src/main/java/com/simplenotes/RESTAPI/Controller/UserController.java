@@ -46,6 +46,11 @@ public class UserController {
         return new ResponseWrapper<>(_userService.create(user), HttpStatus.OK);
     }
 
+    @PostMapping(value = "/login")
+    public ResponseWrapper<User> loginUser(@Valid @RequestBody User user) {
+        return new ResponseWrapper<>(_userService.login(user), HttpStatus.OK);
+    }
+
     @PutMapping
     public ResponseWrapper<User> updateUser(@Valid @RequestBody User user){
         return new ResponseWrapper<>(_userService.update(user), HttpStatus.OK);
