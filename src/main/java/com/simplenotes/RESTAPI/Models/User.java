@@ -26,17 +26,6 @@ public class User implements Serializable {
         return id;
     }
 
-    @Column(name = "uuid")
-    private String uuid;
-
-    public String getUuid(){
-        return uuid;
-    }
-
-    public void setUuid(String uuid){
-        this.uuid = uuid;
-    }
-
     @Column(name = "name")
     @NotNull
     private String name;

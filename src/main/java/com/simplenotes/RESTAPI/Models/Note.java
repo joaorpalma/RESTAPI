@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,7 +26,8 @@ public class Note implements Serializable {
         return id;
     }
 
-    @Column(name = "uuid")
+    @Column(name = "uuid", unique = true)
+    @NotNull
     private String uuid;
 
     public String getUuid(){
