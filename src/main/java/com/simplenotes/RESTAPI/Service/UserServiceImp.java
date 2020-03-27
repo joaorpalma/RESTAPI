@@ -36,6 +36,12 @@ public class UserServiceImp extends UserService {
 
     @Override
     public User create(User user) {
+        User userfound = _userRepository.findByEmail(user.getEmail());
+
+        if(userfound != null) {
+            throw new ResourceNotFoundException( "User already registered." );
+        }
+
         return _userRepository.save(user);
     }
 
